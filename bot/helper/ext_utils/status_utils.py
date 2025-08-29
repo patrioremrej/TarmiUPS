@@ -32,7 +32,7 @@ SIZE_UNITS = [
 
 class MirrorStatus:
     STATUS_UPLOADING = "Upload 📤"
-    STATUS_DOWNLOADING = "Download 📥"
+    STATUS_DOWNLOADING = "Download ⚡"
     STATUS_CLONING = "Clone 🔃"
     STATUS_QUEUEDL = "QueueDL ⏳"
     STATUS_QUEUEUP = "QueueUL ⏳"
@@ -255,7 +255,7 @@ async def get_readable_message(
                 f"<b><i>\n#Nx{index + start_position}: "
                 f"{escape(f"{task.name()}")}\n</i></b>"
                 if elapse <= config_dict["AUTO_DELETE_MESSAGE_DURATION"]
-                else f"\n<b>#Zee{index + start_position}...(Processing)</b>"
+                else f"\n<b>#Nx{index + start_position}...(Processing)</b>"
             )
         else:
             msg += (
