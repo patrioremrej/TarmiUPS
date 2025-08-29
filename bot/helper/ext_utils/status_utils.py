@@ -191,8 +191,8 @@ def get_progress_bar_string(pct):
         100
     )
     cFull = int(p // 10)
-    p_str = "█" * cFull
-    p_str += "▒" * (10 - cFull)
+    p_str = "■" * cFull
+    p_str += "□" * (10 - cFull)
     return f"{p_str}"
 
 
@@ -259,7 +259,7 @@ async def get_readable_message(
             )
         else:
             msg += (
-                f"<b><i>\n#Zee{index + start_position}: "
+                f"<b><i>\n#💫⚡{index + start_position}: "
                 f"{escape(f"{task.name()}")}\n</i></b>"
             )
         if tstatus not in [
